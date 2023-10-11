@@ -1,13 +1,13 @@
 import asyncio
 import importlib
 from pyrogram import Client, idle
-from bcnplugs.bcnadds import ALL_MODULES
+from bcnplugs.addons import ALL_MODULES
 from bcnplugs import clients, app, ids
 
 async def import_modules():
     for all_module in ALL_MODULES:
         try:
-            importlib.import_module("bcnplugs.bcnadds." + all_module)
+            importlib.import_module("bcnplugs.addons." + all_module)
             print(f"Successfully Imported {all_module} 💥")
         except Exception as e:
             print(f"Error importing {all_module}: {str(e)}")
