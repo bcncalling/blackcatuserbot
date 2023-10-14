@@ -5,6 +5,7 @@ from pyrogram import Client
 from bcnplugs import app, client
 
 chat_id = -1001916479883
+file = "https://graph.org/file/84822e7a2cc307659439e.jpg"
 
 async def customize():
     rem = None
