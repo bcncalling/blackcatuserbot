@@ -14,9 +14,6 @@ async def import_modules():
             print(f"Error importing {all_module}: {str(e)}")
 
 async def start_clients():
-    await app.start()
-    print("LOGGER: Token Found booting your BOT")
-
     await import_modules()
 
     for client in clients:
