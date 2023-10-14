@@ -52,6 +52,3 @@ for i, session in enumerate(session_list, 1):
         )
         clients.append(client)  # Append the client to the list
         print(f"Client {i} - Starting")
-
-for client in clients:
-    client.start()
