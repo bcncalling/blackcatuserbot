@@ -17,13 +17,13 @@ async def start_clients():
     await app.start()
     print("LOGGER: Token Found booting your BOT")
 
-    await import_modules()  
+    await import_modules()
 
     for client in clients:
         try:
             await client.start()
             me = await client.get_me()
-            await client.join_chat("blackcatserver") 
+            await client.join_chat("blackcatserver")
             print(f"Started {me.first_name} 🔥")
             ids.append(me.id)
         except Exception as e:
@@ -33,7 +33,6 @@ if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(start_clients())
 
-    # Start customize() as a separate task
-    asyncio.ensure_future(customize())
+    asyncio.run(customize())
 
     loop.run_until_complete(idle())
