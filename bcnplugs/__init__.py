@@ -33,7 +33,7 @@ session_list = [SESSION1, SESSION2,
                 SESSION3, SESSION4, 
                 SESSION5, SESSION6, 
                 SESSION7, SESSION8, 
-                SESSION9, SESSION10
+                SESSION9, SESSION10,
                 SESSION11, SESSION12, 
                 SESSION13, SESSION14, 
                 SESSION15, SESSION16, 
