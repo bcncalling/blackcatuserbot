@@ -1,6 +1,8 @@
 from bcnplugs.addons.help import add_command
 
-module_name = "music"
-commands = ["/play", "Description of command 1", "/vplay", "Description of command 2"]
-
+module_name = "Help"
+commands = [
+    ("/help", "help"),
+    ("/ghelp", "ghelp"),
+]
 add_command(module_name, commands)
