@@ -1,6 +1,6 @@
 pyrogram==2.0.106
 TgCrypto
-pytgcalls==0.9.7
+py-tgcalls==0.9.7
 pymongo[srv]
 motor
 bcnadds==0.0.16
