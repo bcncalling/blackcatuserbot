@@ -1,14 +1,8 @@
 pyrogram==2.0.106
 TgCrypto
-pytgcalls
+pytgcalls==0.9.7
 pymongo[srv]
 motor
 bcnadds==0.0.16
 python-dotenv
 httpx
-flask
-flask_restful
-aiohttp
-aiofiles
-bs4
-
