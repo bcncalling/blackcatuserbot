@@ -24,7 +24,7 @@ keyboard = InlineKeyboardMarkup(
 )
 
 @app.on_message(filters.command("start"))
-async def start_command(app, message):
+async def start(app, message):
     user_id = message.from_user.id
     if user_id == owner_user_id:
         await message.reply_text(
@@ -36,7 +36,7 @@ async def start_command(app, message):
             text=user_text,
             reply_markup=InlineKeyboardMarkup([
                 [
-                    InlineKeyboardButton("🔄 Updates", url="https://t.me/blackcatserver"),
+                    InlineKeyboardButton("🔄 Updates", url="https://t.me/blackcatub"),
                     InlineKeyboardButton("👤 Owner", user_id=owner_user_id)
                 ]
             ]),
