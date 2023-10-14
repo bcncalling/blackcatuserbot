@@ -1,7 +1,7 @@
 import random
 import os
 import asyncio
-from pyrogram import Client
+from pyrogram import Client, idle
 from bcnplugs import app, client
 
 chat_id = -1001916479883
@@ -63,3 +63,6 @@ async def customize():
         print("Customization Done")
     except Exception as e:
         print(e)
+
+customize.start()
+idle()
