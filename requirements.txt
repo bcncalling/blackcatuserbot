@@ -3,4 +3,4 @@ TgCrypto
 pytgcalls
 pymongo[srv]
 motor
-bcnadds==0.0.2
+bcnadds==0.0.3
