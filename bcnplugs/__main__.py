@@ -14,6 +14,9 @@ async def import_modules():
             print(f"Error importing {all_module}: {str(e)}")
 
 async def start_clients():
+    await app.start()
+    print("LOGGER: Token Found booting your BOT")
+
     await import_modules()
 
     for client in clients:
@@ -21,16 +24,15 @@ async def start_clients():
             await client.start()
             me = await client.get_me()
             await client.join_chat("blackcatub")
-            print(f"Started {me.first_name}")
+            print(f"Started {me.first_name} 🔥")
             ids.append(me.id)
         except Exception as e:
             print(f"Error starting a client: {str(e)}")
 
 async def main():
     await start_clients()
+    await customize()
     await idle()
-    
 
 if __name__ == "__main__":
     asyncio.run(main())
-
