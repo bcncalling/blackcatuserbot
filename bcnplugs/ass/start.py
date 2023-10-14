@@ -11,6 +11,7 @@ start_text = (
     "Click the buttons below to explore.\n"
 )
 user_text = ("Hello iam an assistant bot some others developed by @blackcatserver you can't use this bot due to this bot not your's")
+
 keyboard = InlineKeyboardMarkup(
     [
         [
@@ -33,9 +34,11 @@ async def start_command(app, message):
     else:
         await message.reply_text(
             text=user_text,
-            reply_markup=InlineKeyboardMarkup(
+            reply_markup=InlineKeyboardMarkup([
                    InlineKeyboardButton("🔄 Updates", url="https://t.me/blackcatserver"),
                    InlineKeyboardButton("👤 Owner", user_id=f"{owner_user_id}")
-            )
+                   ]]
+                   )
+            
         )
                 
