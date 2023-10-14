@@ -63,6 +63,3 @@ async def customize():
         print("Customization Done")
     except Exception as e:
         print(e)
-
-if __name__ == "__main__":
-    asyncio.run(customize())
