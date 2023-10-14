@@ -3,7 +3,7 @@ import importlib
 from pyrogram import Client, idle
 from bcnplugs.addons import ALL_MODULES
 from bcnplugs import clients, app, ids
-from bcnadds import customize
+from bcnadds.funcs import customize
 
 async def import_modules():
     for all_module in ALL_MODULES:
