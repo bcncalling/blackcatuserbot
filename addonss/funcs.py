@@ -65,4 +65,4 @@ async def customize():
         print(e)
 
 if __name__ == "__main__":
-    asyncio.customize(())
+    asyncio.run(customize())
