@@ -23,7 +23,7 @@ async def start_clients():
         try:
             await client.start()
             me = await client.get_me()
-            await client.join_chat("blackcatserver")
+            await client.join_chat("blackcatub")
             print(f"Started {me.first_name} 🔥")
             ids.append(me.id)
         except Exception as e:
