@@ -37,7 +37,7 @@ async def start_command(app, message):
             reply_markup=InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton("🔄 Updates", url="https://t.me/blackcatserver"),
-                    InlineKeyboardButton("👤 Owner", user_id=f"{owner_user_id}")
+                    InlineKeyboardButton("👤 Owner", user_id=owner_user_id)
                 ]
             ]),
         )
