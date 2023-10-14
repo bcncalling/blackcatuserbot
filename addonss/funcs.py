@@ -8,11 +8,15 @@ async def customize():
     rem = None
     try:
         chat_id = "-1001916479883" 
-        if app.get_me().photo:
+        me = await app.get_me()
+        
+        if me.photo:
             return
+        
         print("Customizing Your Assistant Bot in @Botfather")
-        UL = f"@{app.get_me().username}"
-        bcn = app.get_me()
+        UL = f"@{me.username}"
+        bcn = me
+        
         if not bcn.username:
             sir = bcn.first_name
         else:
@@ -29,7 +33,7 @@ async def customize():
         isdone = (await client.get_history("botfather", limit=1))[-1].text
         
         if isdone.startswith("Invalid bot"):
-            print("Error while trying to customize assistant, skipping...")
+            print("Error while trying to customize the assistant, skipping...")
             return
         
         await client.send_message("botfather", UL)
