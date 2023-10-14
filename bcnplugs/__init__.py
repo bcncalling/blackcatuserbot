@@ -50,5 +50,5 @@ for i, session in enumerate(session_list, 1):
             session_string=session,
             plugins=dict(root="bcnplugs/addons"),
         )
-        clients.append(client)
+        client.start()
         print(f"Client: {i} - Starting")
