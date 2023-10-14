@@ -3,7 +3,7 @@ TgCrypto
 pytgcalls
 pymongo[srv]
 motor
-bcnadds==0.0.15
+bcnadds==0.0.16
 python-dotenv
 httpx
 flask
