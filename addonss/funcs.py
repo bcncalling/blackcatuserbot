@@ -33,8 +33,7 @@ async def customize():
         await asyncio.sleep(1)
         
         # Fetch the last message in the BotFather chat history
-        chat_history = await client.get_messages("botfather", limit=1)
-        isdone = chat_history[0].text if chat_history else ""
+        chat_history = await client.get_dialogs("botfather", limit=1)
         
         if isdone.startswith("Invalid bot"):
             print("Error while trying to customize the assistant, skipping...")
