@@ -19,7 +19,7 @@ keyboard = InlineKeyboardMarkup(
 )
 
 @app.on_message(filters.command("start"))
-async def start(client, message):
+async def start_command(app, message):
     await message.reply_text(
         text=start_text,
         reply_markup=keyboard,
