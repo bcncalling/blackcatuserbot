@@ -6,4 +6,4 @@ motor
 bcnadds==0.0.17
 python-dotenv
 httpx
-git+https://github.com/bcncalling/bcnadds
+
