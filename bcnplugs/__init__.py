@@ -44,11 +44,14 @@ session_list = [SESSION1, SESSION2,
 for i, session in enumerate(session_list, 1):
     if session:
         client = Client(
-            f"blackcat", 
+            f"blackcat_{i}",
             api_id=API_ID,
             api_hash=API_HASH,
             session_string=session,
             plugins=dict(root="bcnplugs/addons"),
         )
-        client.start()
-        print(f"Client: {i} - Starting")
+        clients.append(client)  # Append the client to the list
+        print(f"Client {i} - Starting")
+
+for client in clients:
+    client.start()
