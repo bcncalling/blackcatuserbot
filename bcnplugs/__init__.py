@@ -15,7 +15,7 @@ clients = []
 ids = []
 
 app = Client(
-    "bcn_app",
+    "bcn_ass",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
@@ -29,11 +29,11 @@ session_list = [SESSION1, SESSION2, SESSION3, SESSION4, SESSION5, SESSION6, SESS
 for i, session in enumerate(session_list, 1):
     if session:
         client = Client(
-            f"blackcat_{i}", 
+            f"blackcat", 
             api_id=API_ID,
             api_hash=API_HASH,
             session_string=session,
-            plugins=dict(root="bcncalls/addons"),
+            plugins=dict(root="bcnplugs/addons"),
         )
         clients.append(client)
         print(f"Client: {i} - Starting")
