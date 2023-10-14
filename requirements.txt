@@ -11,6 +11,4 @@ flask_restful
 aiohttp
 aiofiles
 bs4
-googlesearch-python==1.0.1
-gitpython
-humanize
+
