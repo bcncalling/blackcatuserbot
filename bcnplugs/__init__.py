@@ -12,6 +12,7 @@ import time
 from aiohttp import ClientSession
 
 clients = []
+ids = []
 
 app = Client(
     name="bcn",
