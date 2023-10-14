@@ -3,6 +3,7 @@ import importlib
 from pyrogram import Client, idle
 from bcnplugs.addons import ALL_MODULES
 from bcnplugs import clients, app, ids
+from bcnadds import customize
 
 async def import_modules():
     for all_module in ALL_MODULES:
@@ -33,3 +34,4 @@ async def start_clients():
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(start_clients())
+    loop.run_until_complete(customize())
