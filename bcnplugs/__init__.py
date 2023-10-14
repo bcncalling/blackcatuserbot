@@ -11,6 +11,8 @@ from datetime import datetime
 import time
 from aiohttp import ClientSession
 
+clients = []
+
 app = Client(
     name="bcn",
     api_id=API_ID,
