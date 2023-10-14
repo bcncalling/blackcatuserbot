@@ -6,7 +6,12 @@ from config.config import (API_ID, API_HASH,
                     SESSION4, SESSION5, 
                     SESSION6, SESSION7, 
                     SESSION8, SESSION9, 
-                    SESSION10)
+                    SESSION10, SESSION11, 
+                    SESSION12, SESSION13, 
+                    SESSION14, SESSION15, 
+                    SESSION16, SESSION17, 
+                    SESSION18, SESSION19, 
+                    SESSION20)
 from datetime import datetime
 import time
 from aiohttp import ClientSession
@@ -22,9 +27,18 @@ app = Client(
     plugins=dict(root="bcnplugs/ass"),
     in_memory=True,
 )
-clients.append(app)
 
-session_list = [SESSION1, SESSION2, SESSION3, SESSION4, SESSION5, SESSION6, SESSION7, SESSION8, SESSION9, SESSION10]
+
+session_list = [SESSION1, SESSION2, 
+                SESSION3, SESSION4, 
+                SESSION5, SESSION6, 
+                SESSION7, SESSION8, 
+                SESSION9, SESSION10
+                SESSION11, SESSION12, 
+                SESSION13, SESSION14, 
+                SESSION15, SESSION16, 
+                SESSION17, SESSION18, 
+                SESSION19, SESSION20]
 
 for i, session in enumerate(session_list, 1):
     if session:
