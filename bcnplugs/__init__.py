@@ -43,4 +43,4 @@ for session in [SESSION1,
             plugins=dict(root="bcncalls/addons"),
         )
         clients.append(client)
-        print(f"Client: {len(clients)} - Starting")
+        print(f"Client: {len(session)} - Starting")
