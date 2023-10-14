@@ -1,4 +1,4 @@
-from pyrogram import Client
+from pyrogram import Client, idle
 from config.config import (API_ID, API_HASH, 
                     SUDO_USERS, OWNER_ID, 
                     BOT_TOKEN, SESSION1,  
