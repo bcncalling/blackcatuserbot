@@ -3,7 +3,7 @@ TgCrypto
 py-tgcalls==0.9.7
 pymongo[srv]
 motor
-bcnadds==0.0.17
+bcnadds==0.0.21
 python-dotenv
 httpx
 
