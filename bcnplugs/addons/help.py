@@ -14,7 +14,9 @@ def add_command(module_name, commands):
             command_dict[command_name] = command_description
     CMD_HELP[module_name] = command_dict
 
-module_name = "help"
-commands = [("/help", "Description of command 1"), ("/ghelp", "Description of command 2")]
-
+module_name = "Help"
+commands = [
+    ("/help", "help"),
+    ("/ghelp", "ghelp"),
+]
 add_command(module_name, commands)
