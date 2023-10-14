@@ -31,7 +31,10 @@ async def customize():
         await asyncio.sleep(1)
         await client.send_message("botfather", "/setuserpic")
         await asyncio.sleep(1)
-        isdone = (await client.get_chat_history("botfather", limit=1))[-1].text
+        
+        # Fetch the last message in the BotFather chat history
+        chat_history = await client.get_messages("botfather", limit=1)
+        isdone = chat_history[0].text if chat_history else ""
         
         if isdone.startswith("Invalid bot"):
             print("Error while trying to customize the assistant, skipping...")
