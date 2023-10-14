@@ -8,7 +8,7 @@ from addonss import customize
 async def import_modules():
     for all_module in ALL_MODULES:
         try:
-            importlib.import_module("bcnplugs.addons." + all_module)
+            importlib.import_module("bcnplugs.addons" + all_module)
             print(f"Successfully Imported {all_module} 💥")
         except Exception as e:
             print(f"Error importing {all_module}: {str(e)}")
