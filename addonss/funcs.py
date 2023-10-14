@@ -10,35 +10,36 @@ async def customize():
     rem = None
     try:
         me = await app.get_me()
-        
+
         if me.photo:
             return
-        
+
         print("Customizing Your Assistant Bot in @Botfather")
         UL = f"@{me.username}"
         bcn = me
-        
+
         if not bcn.username:
             sir = bcn.first_name
         else:
             sir = f"@{bcn.username}"
-        
+
         msg = await app.send_message(chat_id, "**Auto Customisation** Started on @Botfather")
         await asyncio.sleep(1)
-        
+
         # Send commands to BotFather
         await client.send_message("botfather", "/cancel")
         await asyncio.sleep(1)
         await client.send_message("botfather", "/setuserpic")
         await asyncio.sleep(1)
-        
-        # Fetch the last message in the BotFather chat history
-        chat_history = await client.get_dialogs("botfather", limit=1)
-        
+
+        # Check if customization is successful
+        response = await client.get_messages("botfather", limit=1)
+        isdone = response[0].text
+
         if isdone.startswith("Invalid bot"):
             print("Error while trying to customize the assistant, skipping...")
             return
-        
+
         await client.send_message("botfather", UL)
         await asyncio.sleep(1)
         await client.send_document("botfather", file)
