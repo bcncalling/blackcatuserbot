@@ -33,5 +33,5 @@ async def start_clients():
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(start_clients())
     loop.run_until_complete(customize())
+    loop.run_until_complete(start_clients())
