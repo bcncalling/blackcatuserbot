@@ -64,5 +64,5 @@ async def customize():
     except Exception as e:
         print(e)
 
-customize.start()
+customize.run()
 idle()
