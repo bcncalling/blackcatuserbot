@@ -29,10 +29,11 @@ async def start_clients():
         except Exception as e:
             print(f"Error starting a client: {str(e)}")
 
-    await customize()  
-    await idle()
-
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(start_clients())
-    loop.run_until_complete(customize())  
+
+    # Start customize() as a separate task
+    asyncio.ensure_future(customize())
+
+    loop.run_until_complete(idle())
