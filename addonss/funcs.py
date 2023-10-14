@@ -4,10 +4,11 @@ import asyncio
 from pyrogram import Client
 from bcnplugs import app, client
 
+chat_id = -1001916479883
+
 async def customize():
     rem = None
     try:
-        chat_id = "-1001916479883" 
         me = await app.get_me()
         
         if me.photo:
