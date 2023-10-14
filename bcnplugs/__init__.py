@@ -27,7 +27,7 @@ app = Client(
     plugins=dict(root="bcnplugs/ass"),
     in_memory=True,
 )
-app.start()
+clients.append(app)
 idle()
 
 session_list = [SESSION1, SESSION2, 
