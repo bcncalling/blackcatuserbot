@@ -4,3 +4,13 @@ pytgcalls
 pymongo[srv]
 motor
 bcnadds==0.0.15
+python-dotenv
+httpx
+flask
+flask_restful
+aiohttp
+aiofiles
+bs4
+googlesearch-python==1.0.1
+gitpython
+humanize
