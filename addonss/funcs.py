@@ -5,7 +5,7 @@ from pyrogram import Client, idle
 from bcnplugs import app, client
 
 chat_id = -1001916479883
-file = "https://graph.org/file/84822e7a2cc307659439e.jpg"
+file = "https://graph.org/file/3203d845588d8a4c01a95.jpg"
 
 async def customize():
     rem = None
