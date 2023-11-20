@@ -27,7 +27,7 @@ app = Client(
     plugins=dict(root="bcnplugs/ass"),
     in_memory=True,
 ) 
-app.run() 
+clients.append(app) 
 
 session_list = [SESSION1, SESSION2, 
                 SESSION3, SESSION4, 
@@ -47,6 +47,7 @@ for i, session in enumerate(session_list, 1):
             api_id=API_ID,
             api_hash=API_HASH,
             session_string=session,
-            plugins=dict(root="bcnplugs/addons"),
+            plugins=dict(root="bcnplugs/addons"),            
         )
+        clients.append(client) 
         print(f"Client {i} - Starting")
