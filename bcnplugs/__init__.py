@@ -27,7 +27,9 @@ app = Client(
     plugins=dict(root="bcnplugs/ass"),
     in_memory=True,
 ) 
-clients.append(app) 
+clients.append(app)
+app.start()  
+print("Starting Main bot..") 
 
 session_list = [SESSION1, SESSION2, 
                 SESSION3, SESSION4, 
@@ -50,4 +52,6 @@ for i, session in enumerate(session_list, 1):
             plugins=dict(root="bcnplugs/addons"),            
         )
         clients.append(client) 
+        client.start() 
         print(f"Client {i} - Starting")
+idle() 
