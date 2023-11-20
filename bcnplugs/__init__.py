@@ -26,8 +26,7 @@ app = Client(
     bot_token=BOT_TOKEN,
     plugins=dict(root="bcnplugs/ass"),
     in_memory=True,
-)
-app.start() 
+) 
 
 session_list = [SESSION1, SESSION2, 
                 SESSION3, SESSION4, 
