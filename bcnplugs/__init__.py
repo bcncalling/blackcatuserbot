@@ -27,7 +27,7 @@ app = Client(
     plugins=dict(root="bcnplugs/ass"),
     in_memory=True,
 )
-clients.append(app)
+app.start() 
 
 session_list = [SESSION1, SESSION2, 
                 SESSION3, SESSION4, 
