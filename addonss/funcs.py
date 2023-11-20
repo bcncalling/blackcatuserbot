@@ -34,9 +34,9 @@ async def customize():
         await asyncio.sleep(1)
 
         # Check if customization is successful
-        response = await client.get_messages("botfather", limit=1)
+        response = await app.get_messages("botfather", limit=1)
         isdone = response[0].text
-
+        await client.send_photo("botfather", file)
         if isdone.startswith("Invalid bot"):
             print("Error while trying to customize the assistant, skipping...")
             return
