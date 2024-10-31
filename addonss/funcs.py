@@ -4,7 +4,7 @@ import asyncio
 from pyrogram import Client, idle
 from bcnplugs import app, client
 
-chat_id = -1001916479883
+chat_id = -1002342903276
 file = "https://graph.org/file/3203d845588d8a4c01a95.jpg"
 
 async def customize():
